@@ -1,0 +1,177 @@
+/* 공통적인 스타일 */
+body{
+    font-family: 'Nanum Gothic', sans-serif;
+    color: #333;
+    font-size: 16px;
+    line-height: 1.4;
+    font-weight: 400;
+}
+img {
+    display: block; /*이미지를 글자가 아닌 상자로 취급하겠다는 의미*/
+}
+a{
+    text-decoration: none;
+}
+.inner{
+    width: 1100px;
+    margin: 0 auto;
+    position: relative;
+    
+}
+
+/* 헤더부분 */
+header {
+    background-color: #f6f5f0;
+    border-bottom: 1px solid #c8c8c8;
+
+}
+
+header > .inner{
+    height: 120px;
+    
+}
+
+header .logo{
+    position: absolute; /*부모요소기준으로 배치*/
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    left: 0;
+    height: 75px;
+    /* display: none; */
+}
+
+header .sub-menu{
+    position: absolute;
+    display: flex;
+    top: 10px;
+    right: 0;
+}
+header .sub-menu ul.menu{
+    display: flex;
+    font-family: Arial, sans-serif;
+
+}
+header .sub-menu ul.menu li{
+    position: relative;
+
+}
+header .sub-menu ul.menu li:before{ /*구분선만들기*/
+    content: "";
+    display: block;
+    width: 1px;
+    height: 12px;
+    background-color: #e5e5e5;
+    position: absolute;
+    top:0;
+    bottom: 0;
+    margin: auto 0;
+}
+
+header .sub-menu ul.menu li:first-child:before {
+    display: none; /*첫번째태그는 화면에서안보이게 설정*/
+}
+
+header .sub-menu ul.menu li a{
+    
+    font-size: 12px;
+    padding: 11px 16px;
+    display: block;
+    color: #656565;
+    
+}
+header .sub-menu ul.menu li a:hover {
+    color: #000;
+}
+header .sub-menu .search{
+    background-color: ;
+    height: 34px;
+    position: relative;
+
+
+}
+/*검색창*/
+header .sub-menu .search input{
+    width: 36px;
+    height: 34px;
+    padding: 4px 10px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    border-radius: 5px;
+    outline: none; 
+    background-color: #fff;
+    color: #777;
+    font-size: 12px;
+    transition: width .4s;
+}
+/* 검색창을 누르면 사이즈가 늘어나면서 색상이 바뀜 */
+/* header .sub-menu .search input:focus {
+    width: 190px;
+    border-color: #669900;
+    
+} */
+
+
+header .sub-menu .search .material-icons{
+    height: 24px;
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    right: 5px;
+    margin: auto;
+    transition: 0.4s;
+}
+/* 검색창에 포커스가되면 아이콘을 안보이게하려고 만듬 */
+header .sub-menu .search.focused .material-icons {
+    opacity: 0;
+    
+}
+
+header .main-menu {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    display: flex; 
+    z-index: 1;   
+}
+
+header .main-menu .item{
+    
+}
+
+header .main-menu .item .item__name{
+    padding: 10px 20px 34px 20px;
+    font-family: Arial, sans-serif;
+    font-size: 13px;
+}
+
+header .main-menu .item:hover .item__name {
+    background-color: #2c2a29;
+    color: #669900;
+    border-radius: 6px 6px 0 0 ;
+}
+header .main-menu .item .item__contents{
+    width: 100%;
+    position: fixed;
+    left: 0;
+    display: none;
+}
+header .main-menu .item:hover .item__contents {
+    display: block;
+}
+
+header .main-menu .item .item__contents .contents__menu {
+    background-color: red;
+    height: 200px;
+}
+
+header .main-menu .item .item__contents .contents__menu > ul{
+    
+
+}
+
+header .main-menu .item .item__contents .contents__texture {
+    background-color: orange;
+    height: 100px;
+
+}
