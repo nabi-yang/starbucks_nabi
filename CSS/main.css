@@ -5,6 +5,7 @@ body {
     font-weight: 400; /*글자두께*/
     line-height: 1.4; /*글자간격*/
     font-family: 'Nanum Gothic', sans-serif;
+    height: 3000px;
     
 
 }
@@ -25,9 +26,12 @@ a{
 
 /* 헤더부분 */
 header {
+    width: 100%;
     background-color: #f6f5f0;
     border-bottom: 1px solid #c8c8c8;
-    position: relative;
+    /* position: relative; */
+    position: fixed; 
+    top: 0;
 
 }
 
@@ -209,4 +213,19 @@ header .main-menu .item .item__contents .contents__texture p {
     color: #669900;
     margin: 4px 0 14px; /*위 좌우 아래 */
     
+}
+/* 뱃지 */
+header .badges{
+    position: absolute;
+    top: 132px;
+    right: 12px;
+    
+}
+/* 뱃지속성 */
+header .badges .badge {
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 12px;
+    box-shadow: 4px 4px 10px rgba(0,0,0,.15); /*x , y, blur*/
+    cursor: pointer;
 }
