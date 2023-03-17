@@ -136,7 +136,7 @@ header .main-menu{
     position: absolute;
     bottom: 0;
     right: 0;
-    z-index: 1; /* 메인에 다른 배너까지도 덮히도록 추가한것 */
+    z-index: 1; /*메인에 다른 배너까지도 덮히도록 추가한것*/
     display: flex; 
 }
 
