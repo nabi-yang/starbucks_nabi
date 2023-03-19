@@ -455,3 +455,11 @@ background-position: center;
 .notice .notice-line .inner__right .toggle-promotion .material-icons{
     font-size: 30px;
 }
+
+.notice .promotion{
+    height: 693px;
+    background-color: #f6f5ef;
+}
+
+
+.notice .promotion .swiper-container{}
