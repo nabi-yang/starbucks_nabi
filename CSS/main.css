@@ -459,7 +459,19 @@ background-position: center;
 .notice .promotion{
     height: 693px;
     background-color: #f6f5ef;
+    position: relative;
 }
 
 
-.notice .promotion .swiper-container{}
+.notice .promotion .swiper-container{
+    width: calc(819px * 3+ 20px); 
+    /*calc함수*/ 
+    height: 553px;
+    background-color: orange;
+    text-align: center;
+    font-size: 200px;
+    position: absoulte;
+    top: 40px;
+    left: 50%;
+    margin-left: -1238.5px;
+}
