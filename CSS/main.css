@@ -99,6 +99,7 @@ header .logo {
     position:absolute;
     top: 0;
     bottom: 0;
+    left: 0;
     margin: auto;
     
 }
@@ -121,7 +122,6 @@ header .sub-menu ul.menu li{
 
 header .sub-menu ul.menu li::before {
     content: "";
-    display: block;
     width: 1px;
     height: 12px;
     background-color: #e5e5e5;
@@ -132,7 +132,7 @@ header .sub-menu ul.menu li::before {
 
 }
 /* 첫번째 구분선을 안보이도록 */
-header .sub-menu ul.menu li:first-child:before {
+header .sub-menu ul.menu li:first-child::before {
     display: none;
 }
 
@@ -156,7 +156,7 @@ header .sub-menu .search{
 
 header .sub-menu .search input{
     width: 36px;
-    height: 34px;
+    height: inherit;
     padding: 4px 10px;
     border: 1px solid #ccc;
     box-sizing: border-box;
@@ -194,9 +194,6 @@ header .main-menu{
     z-index: 1; /*메인에 다른 배너까지도 덮히도록 추가한것*/
     display: flex; 
 }
-
-header .main-menu .item{}
-
 header .main-menu .item .item__name {
     padding: 10px 20px 34px 20px;
     font-family: arial, sans-serif;
@@ -237,6 +234,7 @@ header .main-menu .item .item__contents .contents__menu > ul > li{
 
 header .main-menu .item .item__contents .contents__menu > ul > li h4 {
     padding: 3px 0 12px 0;
+    font-size: 14px;
     color: #fff;
 
 }
@@ -348,13 +346,10 @@ background-position: center;
 }
 
 /* notice */
-.notice{}
 
 .notice .notice-line{
     position: relative;
 }
-
-
 .notice .notice-line .bg-left{
     position: absolute;
     top: 0;
@@ -377,6 +372,7 @@ background-position: center;
 .notice .notice-line .inner{
     height: 63px;
     /* border: 2px solid red; */
+    z-index:1;
     display: flex;
 }
 
@@ -387,7 +383,6 @@ background-position: center;
     display: flex;
     align-items: center;
 }
-
 .notice .notice-line .inner__left h2{
     color: #fff;
     font-size: 17px;
@@ -395,7 +390,6 @@ background-position: center;
     margin-right: 20px;
     
 }
-
 .notice .notice-line .inner__left .swiper-container{
     height: 62px;
     flex-grow: 1;
@@ -407,12 +401,9 @@ background-position: center;
     
 
 }
-
-
 .notice .notice-line .inner__left .swiper-slide a{
     color: #fff;
 }
-
 /* 더보기버튼  */
 .notice .notice-line .inner__left .notice-line__more{
     width: 62px;
@@ -422,7 +413,6 @@ background-position: center;
     align-items: center;
     
 }
-
 .notice .notice-line .inner__left .notice-line__more .material-icons{
     color: #fff;
     font-size: 30px;
@@ -467,11 +457,29 @@ background-position: center;
     width: calc(819px * 3+ 20px); 
     /*calc함수*/ 
     height: 553px;
-    background-color: orange;
-    text-align: center;
-    font-size: 200px;
+
     position: absoulte;
     top: 40px;
     left: 50%;
-    margin-left: -1238.5px;
+    margin-left: calc((819px * 3 + 20px) / -2);
+}
+/* 사이드부분은 반투명하게 */
+.notice .promotion .swiper-slide{
+    opacity: .5;
+    transition: opacity 1s;
+    position: relative;
+}
+/* 중앙부분은 불투명하게 */
+.notice .promotion .swiper-slide-active{
+    opacity: 1;
+}
+
+
+.notice .promotion .swiper-slide .btn{
+    position: absolute;
+    bottom: 0; 
+    left: 0;
+    right: 0;
+    margin: auto;
+
 }

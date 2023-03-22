@@ -56,13 +56,16 @@ new Swiper('.notice-line .swiper-container',{
     loop: true
 });
 
-// new Swiper('.promotion .swiper-container',{
+new Swiper('.promotion .swiper-container',{
     
-//     sliderPerview :3, //한번에 보여줄 슬라이드 갯수
-//     spaceBetween : 10, //슬라이드 사이 여백
-//     centeredSlides: true,//1번 슬라이드를 가운데로 
-//     loop:true
-// });
+    sliderPerview :3, //한번에 보여줄 슬라이드 갯수
+    spaceBetween : 10, //슬라이드 사이 여백
+    centeredSlides: true,//1번 슬라이드를 가운데로 
+    loop:true,
+    autoplay: {
+        delay:5000 //5초
+    }
+});
 new Swiper('.promotion .swiper-container', {
     // direction: 'horizontal', // 수평 슬라이드
     autoplay: { // 자동 재생 여부
