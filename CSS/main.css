@@ -5,7 +5,7 @@ body {
     font-weight: 400; /*글자두께*/
     line-height: 1.4; /*글자간격*/
     font-family: 'Nanum Gothic', sans-serif;
-    height: 3000px;
+    height: 6000px;
     
 
 }
@@ -68,7 +68,7 @@ a{
     background-color: #592B18;
 }
 
-.btn.btn--while{
+.btn.btn--white{
     color: #fff;
     border-color: #fff;
 }
@@ -571,7 +571,7 @@ background-image: url(../images/promotion_slide_pager_on.png);
 }
 
 .rewards .inner{
-    background-image: url(../images/rewards.jpg);
+    background-image: url("../images/rewards.jpg");
     height: 241px;
     
 }
@@ -598,3 +598,154 @@ background-image: url(../images/promotion_slide_pager_on.png);
     margin-top: 10px;
     flex-grow: 1; 
 }
+/* youtube video */
+.youtube {
+    position: relative;
+    height: 700px;
+    background-color: #333;
+    overflow: hidden;
+  }
+  .youtube .youtube__area {
+    width: 1920px;
+    position: absolute;
+    /* 16비율 */
+    left: 50%;
+    margin-left: calc(1920px / -2);
+    /* 9비율 */
+    top: 50%;
+    margin-top: calc(1920px * 9 / 16 / -2);
+  }
+  .youtube .youtube__area::before {
+    content: "";
+    display: block;
+    /* 16:9 영상 비율로 요소 크기 만들기! */
+    width: 100%;
+    height: 0;
+    padding-top: 56.25%;
+  }
+  .youtube .youtube__cover {
+    position: absolute;
+    background-color: rgba(0,0,0,.3);
+    background-image: url("../images/video_cover_pattern.png");
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+
+#player{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left:0;
+
+}
+.youtube .inner{
+    height: 700px;
+    /* background-color: royalblue; */
+}
+.youtube .floating1{
+    position: absolute;
+    top: 50px;
+    left: 0;
+}
+
+.youtube .floating2{
+    position: absolute;
+    top: 350px;
+    left: 150px;
+}
+
+
+
+/* season product */
+.season-product{
+    background-image: url(../images/season_product_bg.jpg);
+}
+
+.season-product .inner{
+    height: 400px;
+}
+.season-product .floating3{
+    position: absolute;
+    top: -200px;
+    right: 0;
+}
+.season-product .text-group{
+    position: absolute;
+    top: 110px;
+    right: 100px;
+
+}
+.season-product .text-group .title{
+    margin-bottom: 10px;
+}
+
+.season-product .text-group .description{
+    margin-bottom: 15px;
+}
+
+.season-product .text-group .more{}
+
+/* reserve coffee */
+.reserve-coffee{
+    background-image: url(../images/reserve_bg.jpg);
+}
+
+.reserve-coffee .inner{
+    height: 400px;
+}
+
+.reserve-coffee .reserve-logo{
+    position: absolute;
+    top: 110px;
+    left: 0;
+}
+
+.reserve-coffee .text-group{
+    position: absolute;
+    top: 124px;
+    left: 208px;
+}
+
+.reserve-coffee .product{
+    position: absolute;
+    top: 0px;
+    right: 0px;
+}
+
+/* <!-- pick your favorite --> */
+.pick-your-favorite{
+    background-image: url(../images/favorite_bg.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-attachment: fixed; /*뷰포트에 고정*/
+    background-size: cover;
+}
+
+.pick-your-favorite .inner{
+    padding: 110px 0;
+    
+
+}
+
+.pick-your-favorite .text-group{
+    /* background-color: orange; */
+    margin-left: 100px;
+    display: flex;
+    width: 362px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.pick-your-favorite .text-group .title{
+    margin-bottom: 40px;
+}
+
+
+.pick-your-favorite .text-group .description{
+    margin-bottom: 40px;
+}
+
