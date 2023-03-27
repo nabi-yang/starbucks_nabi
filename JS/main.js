@@ -16,6 +16,7 @@ searchInputEl.addEventListener('blur', function () {
 });
 
 const badgeEl=document.querySelector('header .badges');
+const toTopEl = document.querySelector('#to-top');
 
 //윈도우화면이 '스크롤'되면 함수를 실행하겠다
 window.addEventListener('scroll', _.throttle(function(){
@@ -27,18 +28,31 @@ window.addEventListener('scroll', _.throttle(function(){
             opacity:0,  // , 까먹지말고 넣어주기
             display: 'none'
         });
+        //버튼보이게
+        gsap.to('#to-top',.2 , {
+            x:0
+        });
+        
     }else{
         // badgeEl.style.display ='block';
         gsap.to(badgeEl, .6, {
             opacity:1,
             display:'block'
-            
+       
+    });
+    //버튼숨기기
+    gsap.to(toTopEl,.2 , {
+        x:100
     });
 }
 }, 300)); //0.3초를 의미한다 
 //_.throttle(함수, 시간)
 
-
+toTopEl.addEventListener('click', function(){
+    gsap.to(window, .7 , {
+        scrollTo: 0 ,
+    });
+});
 const fadeEls = document.querySelectorAll('.visual .fade-in');
 fadeEls.forEach(function(fadeEl, index){
     // gsap.to(요소, 지속시간, 옵션);
@@ -83,7 +97,17 @@ new Swiper('.promotion .swiper-container', {
       prevEl: '.promotion .swiper-prev', // 이전 버튼 선택자
       nextEl: '.promotion .swiper-next' // 다음 버튼 선택자
     }
-  });
+});
+new Swiper('.awards .swiper-container',{ //Swiper 꼭 대문자로... 안되가지고 ㅜㅜ찾아보니 swiper로 적어서 안된거였다
+    autoplay: true,
+    loop: true,
+    spaceBetween: 30,
+    slidesPerView: 5 ,
+    navigation: {
+        prevEl:'.awards .swiper-prev',
+        nextEl:'.awards .swiper-next'
+    }
+});
 
 const promotionEl= document.querySelector('.promotion');
 const promotionToggleBtn=document.querySelector('.toggle-promotion')
@@ -130,3 +154,6 @@ spyEls.forEach(function(spyEl){
         .setClassToggle(spyEl, 'show')
         .addTo(new ScrollMagic.Controller());
 });
+
+const thisYear =document.querySelector('.this-year');
+thisYear.textContent = new Date().getFullYear(); 
